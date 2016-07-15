@@ -1,7 +1,7 @@
 {
-  "name": "ThyNameIsMud.com",
+  "name": "TransLOCipTest.com",
   "version": "1.0.0",
-  "description": "The site for Louis Weber",
+  "description": "To visualize ip6 datas",
   "main": "guilpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,33 +1,19 @@
-#ThyNameIsMud.com - Website for Louis Weber
-
+#TransLOCip6Test.com - By Louis Weber
 
 ###Required
-NodeJS 
-NPM
-PM2
-Gulp
+* [NodeJS](https://nodejs.org/en/)
+* [NPM](https://www.npmjs.com/)
+* [PM2](http://pm2.keymetrics.io/)
+* [Gulp](http://gulpjs.com/)
 
-###Install and Activate
-```bash
-npm install
+###Install
+
 ```
-```bash
-base_path=~/Site/ gulp
+	npm install
 ```
 
-###File Structure
+Make any changes needed to the `config.json.example` and rename as `config.json`
+
 ```
-Framework
-	| Backend
-		| Builder
-			| Config
-			| Tasks
-		| Server
-			| Config - various api configs
-			| Routes
-	| Fontend
-		| Libaries - Populated by Bower - empty
-		| Templates - TODO -
-		| Static - Populated by Bower/Symantic - empty
-		| UI-Framework - Symatntic 
+	base_path=~/site_path/ gulp
 ```
