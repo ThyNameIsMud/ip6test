@@ -31,7 +31,6 @@ nbproject
 .svn
 .CVS
 .build
-frontend/static/*
 
 # Unit test / coverage reports
 .coverage

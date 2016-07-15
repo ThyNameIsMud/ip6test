@@ -10,7 +10,7 @@
 	"paths": {},
 	"server": {
 		"frontend": {
-			"domain" : "thynameismud.com",
+			"domain" : "ipv6",
 			"host" : "localhost",
 			"port" : 3000	
 		}

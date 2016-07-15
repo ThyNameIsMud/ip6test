@@ -30,7 +30,7 @@ module.exports = function (callback) {
 
 	gulp.task('connect-frontend', function() {
 
-		var frontend = exec('pm2 start ' + CONFIG.paths.servers + 'frontend.js --watch --name ' +CONFIG.server.domain +' frontend',
+		var frontend = exec('pm2 start ' + CONFIG.paths.servers + 'frontend.js --watch --name ' +CONFIG.server.frontend.domain,
 				function (err, stdout, stderr) {
 					if(err) {
 						console.error(err);	
@@ -38,7 +38,8 @@ module.exports = function (callback) {
 				}
 			);
 		frontend.on('close', function(data) {
-			listPM2Items();
+			console.info("Frontend Connected")
+			//listPM2Items();
 		});
 	});
 };
