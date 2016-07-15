@@ -52,8 +52,7 @@ server.register([
 
 server.route(require('./routes/lib'));
 server.route(require('./routes/index'));
-server.route(require('./routes/links'));
-server.route(require('./routes/resume'));
+server.route(require('./routes/coord'));
 
 /*
   _____                 _       

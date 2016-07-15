@@ -1,4 +1,4 @@
-#TransLOCip6Test.com - By Louis Weber
+#TransLOC Full Stack Test - By Louis Weber
 
 ###Required
 * [NodeJS](https://nodejs.org/en/)

@@ -1,5 +1,47 @@
 	{{!< layout/default}}
 	
 	<div class="container">
+		<div id="global">
 
+		</div>
 	</div>
+
+	<style type="text/css">
+		.ui.large.menu {
+			margin-bottom: 0;
+		}
+
+		#global {
+			height: 100%;
+			min-height: 600px;
+		}
+	</style>
+
+
+	<script type="text/javascript">
+		function lolfail () {
+			jQuery('#global').insertAbove("<div class='error'>Problems Happened :(</div>");
+		}
+
+		// Init Map and zoom on the US
+		var mymap = L.map('global').setView([0, 0], 2);
+
+		// Pull in map visual
+		L.tileLayer('https://api.mapbox.com/styles/v1/thynameismud/{id}/tiles/256/{z}/{x}/{y}?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+			id: 'ciqo19nk00001binhob2wz8pl',
+			accessToken: 'pk.eyJ1IjoidGh5bmFtZWlzbXVkIiwiYSI6ImNpcW8xNTd4NjAxZWJnaGpmNWQwYWVjb3kifQ.zpHGoXY6hCw_DUL0MLSQHg'
+		}).addTo(mymap);
+
+		// Map is set up, now we load in our heat maps
+		// Grab the basic coordinates for users
+		jQuery.getJSON('/coord/0/0/0')
+			.done(function(data) {
+				console.dir(data);
+				if(data.loc) {
+					var topLayerHeat = L.heatLayer(data.loc).addTo(mymap);	
+				}
+			})
+			.fail(lolfail);
+
+	</script>

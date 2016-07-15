@@ -4,7 +4,7 @@ module.exports = {
 	handler: function (request, reply) {
 		/* do things with request; */
 		reply.view('index', {
-	        title: 'ThyNameIsMud.com'
+	        title: 'TransLOC IPv6 Visualization'
 	    });
 	}
 };
